@@ -51,6 +51,10 @@
 			title: "{Name}",
 			content: "Sân golf ở <b>{Location}</b>."
 		};
+		var point_template_samsung = {
+			title: "{Name}",
+			content: "Samsung ở <b>{Location}</b>."
+		};
 		var jsondata = {
 			"points": [
 				{
@@ -354,6 +358,29 @@
 						}
 					},
 					popupTemplate: point_template_sangolf
+				},
+				//`Samsung - Vinh
+				{
+					type: "polygon",
+					rings: [
+						[106.790485, 10.829397],
+						[106.795032, 10.832622],
+						[106.800881, 10.831364],
+						[106.801283, 10.827627],
+						[106.792800, 10.821488],
+						[106.788639, 10.827191]
+					],
+					Name: "SAMSUNG",
+					Location: "Khu công nghệ cao, Tăng Nhơn Phú B, Thủ Đức, Hồ Chí Minh, Vietnam",
+					symbol: {
+						type: "simple-fill",
+						color: [255, 0, 0, 0.4], // Đã đổi sang màu đỏ nhạt
+						outline: {
+							color: [255, 25, 255], // Đã đổi sang màu hồng nhạt
+							width: 1
+						}
+					},
+					popupTemplate: point_template_samsung
 				}
 			]
 		};
