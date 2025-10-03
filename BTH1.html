@@ -51,6 +51,14 @@
 			title: "{Name}",
 			content: "Sân golf ở <b>{Location}</b>."
 		};
+		var point_template_ktx = {
+			title: "{Name}",
+			content: "Ký túc xá ở <b>{Location}</b>."
+		};
+		var point_template_uel = {
+			title: "{Name}",
+			content: "Trường ở <b>{Location}</b>."
+		};
 		var jsondata = {
 			"points": [
 				{
@@ -148,7 +156,7 @@
 						}
 					},
 					popupTemplate: point_template_sangolf
-				}
+				},
 			],
 			"lines": [
 				{
@@ -354,6 +362,48 @@
 						}
 					},
 					popupTemplate: point_template_sangolf
+				},
+
+				// Phần Trung làm
+				{
+					type: "polygon",
+					rings: [
+						[106.804428, 10.876131],
+						[106.808979, 10.882712],
+						[106.811081, 10.881318],
+						[106.806419, 10.874507],
+						[106.805175, 10.875051]
+					],
+					Name: "Ký túc xá khu A DHQG HCM",
+					Location: "Khu phố 33, Dĩ An, Hồ Chí Minh, Việt Nam",
+					symbol: {
+						type: "simple-fill",
+						color: [0, 66, 105, 0.4],
+						outline: {
+							color: [176, 176, 176],
+							width: 1
+						}
+					},
+					popupTemplate: point_template_ktx
+				},
+				{
+					type: "polygon",
+					rings: [
+						[106.775126, 10.870199],
+						[106.777389, 10.873370],
+						[106.781370, 10.871927],
+						[106.780394, 10.868517]
+					],
+					Name: "Trường Đại học Kinh tế - Luật UEL",
+					Location: "Khu phố 6, Thủ Đức, Hồ Chí Minh, Việt Nam",
+					symbol: {
+						type: "simple-fill",
+						color: [0, 66, 105, 0.4],
+						outline: {
+							color: [176, 176, 176],
+						}
+					},
+					popupTemplate: point_template_uel
 				}
 			]
 		};
