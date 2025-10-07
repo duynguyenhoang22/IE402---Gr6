@@ -83,8 +83,34 @@
 			title: "{Name}",
 			content: "Nhà ga Metro Thảo điền - Xa lộ HN ở <b>{Location}</b>."
 		};
+        // Hải (wibu): Suối Tiên
+        var point_template_suoitien = {
+            title: "{name}",
+            content: "Công viên văn hoá Suối Tiên ở <b>{Location}</b>."
+        }
+
+
 		var jsondata = {
 			"points": [
+
+                // Suối Tiên của Hải (wibu)
+                {
+					type: "point",
+					longitude: 106.80331577762911,
+					latitude: 10.863263877152631, 
+					Name: "Quảng trường Phật Địa Mẫu",
+					Location: "thuộc khu du lịch Suối Tiên",
+					symbol: {
+						type: "simple-marker",
+						color: [0, 153, 51],
+						outline: {
+							color: [255, 255, 255],
+							width: 1
+						}
+					},
+					popupTemplate: point_template_suoitien
+				},
+
 				{
 					type: "point",
 					longitude: 106.7986823851482,
@@ -258,6 +284,33 @@
 				}
 			],
 			"polygons": [
+                // Suối Tiên của Hải (wibu)
+                {
+					type: "polygon",
+					rings: [
+						[106.80384446578441, 10.867153175339006 ],
+						[106.80073195425113, 10.865495187630664 ],
+						[106.80150995629009, 10.863161715219185 ],
+						[106.80252626526588, 10.86307223065302 ],
+						[106.80239593129383, 10.86127474744802 ],
+                        [106.80299873579516, 10.861286003330646 ],
+                        [106.80470456214573, 10.85739248561479 ],
+                        [106.80536727135613, 10.858930052354888 ]
+
+					],
+					Name: "Công viên du lịch Suối Tiên",
+					Location: "VR83+F7 Thủ Đức, Hồ Chí Minh, Việt Nam",
+					symbol: {
+						type: "simple-fill",
+						color: [0, 102, 204, 0.4],
+						outline: {
+							color: [255, 255, 255],
+							width: 1
+						}
+					},
+					popupTemplate: point_template_suoitien
+				},
+
 				{
 					type: "polygon",
 					rings: [
