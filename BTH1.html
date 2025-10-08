@@ -1,9 +1,9 @@
-<html>
+<html lang="vi">
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>ArcGIS JavaScript Tutorials: Create a Starter App</title>
+	<meta name="viewport" content="initial-scale=1, width=device-width">
+	<title>ArcGIS JavaScript: Nhóm 6 Lab 1 IE403</title>
 	<style>
 		html,
 		body,
@@ -21,7 +21,9 @@
 	<script>
 		var point_template_tree = {
 			title: "{Name}",
-			content: "Cây này ở <b>{Location}</b>."
+			content: "Cây này ở <b>{Location}</b>.<br><br> \
+			<img src=https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Linde_von_linn.jpg/1280px-Linde_von_linn.jpg \
+			alt='Cây xanh' style='width:150px;'>"
 		};
 		var point_template_light = {
 			title: "{Name}",
@@ -58,6 +60,14 @@
 		var point_template_uel = {
 			title: "{Name}",
 			content: "Trường ở <b>{Location}</b>."
+		};
+		var point_template_nghiatrang = {
+			title: "{Name}",
+			content: "Nghĩa trang ở <b>{Location}</b>."
+		};
+		var point_template_daituongniem = {
+			title: "{Name}",
+			content: "Đài tưởng niệm ở <b>{Location}</b>."
 		};
 		var point_template_samsung = {
 			title: "{Name}",
@@ -136,7 +146,7 @@
 						height: "27px",
 						yoffset: "13px",
 						outline: {
-							color: [255, 255, 255],
+							color: [155, 255, 255],
 							width: 1
 						}
 					},
@@ -240,6 +250,38 @@
 						}
 					},
 					popupTemplate: point_template_nhamaysamsung
+				},
+				{
+					type: "point",
+					longitude: 106.76955867662716,
+					latitude: 10.862307500026844,
+					Name: "Đài tưởng niệm Nghĩa trang Thành phố Hồ Chí Minh",
+					Location: "trung tâm Nghĩa trang Thành phố Hồ Chí Minh",
+					symbol: {
+						type: "simple-marker",
+						color: [100, 200, 50],
+						outline: {
+							color: [255, 255, 255],
+							width: 1
+						}
+					},
+					popupTemplate: point_template_daituongniem
+				},
+				{
+					type: "point",
+					longitude: 106.74060360067767, 
+					latitude: 10.877426474608715,
+					Name: "Mộ phần nhạc sĩ Trịnh Công Sơn",
+					Location: " trong nghĩa trang Gò Dưa",
+					symbol: {
+						type: "simple-marker",
+						color: [100, 200, 50],
+						outline: {
+							color: [255, 255, 255],
+							width: 1
+						}
+					},
+					popupTemplate: point_template_daituongniem
 				},
 				{
 					type: "point",
@@ -527,6 +569,7 @@
 					},
 					popupTemplate: point_template_sangolf
 				},
+				//Nam Hai - Nghĩa trang Gò Dưa
 				{
 					type: "polygon",
 					"rings": [
@@ -568,6 +611,7 @@
 					},
 					popupTemplate: point_template_nghiatrang
 				},
+				//Nam Hai - Nghĩa trang Thành phố Hồ Chí Minh
 				{
 					type: "polygon",
 					"rings": [
