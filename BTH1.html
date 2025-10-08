@@ -21,7 +21,9 @@
 	<script>
 		var point_template_tree = {
 			title: "{Name}",
-			content: "Cây này ở <b>{Location}</b>."
+			content: "Cây này ở <b>{Location}</b>.<br><br> \
+			<img src=https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Linde_von_linn.jpg/1280px-Linde_von_linn.jpg \
+			alt='Cây xanh' style='width:150px;'>"
 		};
 		var point_template_light = {
 			title: "{Name}",
@@ -71,8 +73,70 @@
 			title: "{Name}",
 			content: "Samsung ở <b>{Location}</b>."
 		};
+		var point_template_nhamaysamsung = {
+			title: "{Name}",
+			content: "Nhà máy Samsung ở <b>{Location}</b>.<br><br> \
+			<img src=https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrw5CV76qer7bt-otus1U5rk2AH4-GlLHvofHqKvK6nD-2l5kTtKMbDDLUiBZKwsxz4dp0lkJ0fUy50_0wvmlMMyoBOHrHvayM_O7uTOzUgAH2CayTkUGvLsLsPo8IkIKECyk7t=w408-h306-k-no \
+			alt='Nhà máy Samsung' style='width:250px;'>"
+		};
+		var point_template_longphuoc = {
+			title: "{Name}",
+			content: "Phường Long Phước ở <b>{Location}</b>."
+		};
+		var point_template_cholongphuoc = {
+			title: "{Name}",
+			content: "Chợ Long Phước ở <b>{Location}</b>.</br><br> \
+			<img src=https://longphuoc.vn/wp-content/uploads/2025/04/dat-nen-dat-o-dat-tho-cu-ba-ria-ba-ria-vung-tau-1668478776-nhadat.cafeland.vn_.jpg \
+			alt='Chợ Long Phước' style='width:300px;'>"
+		};
+		var point_template_nghiatrang = {
+			title: "{Name}",
+			content: "Nghĩa trang ở <b>{Location}</b>."
+		};// Vũ: Điểm Gigamall, Thảo Điền, Dokkii, Ga Metro
+		var point_template_gigamall = {
+			title: "{Name}",
+			content: "Trung tâm thương mại Gigamall ở <b>{Location}</b>."
+		};
+		var point_template_thaodien = {
+			title: "{Name}",
+			content: "Khu đô thị ở <b>{Location}</b>."
+		};
+		var point_template_dokkii = {
+			title: "{Name}",
+			content: "Nhà hàng Dokkii ở <b>{Location}</b>."
+		};
+		var point_template_gametro = {
+			title: "{Name}",
+			content: "Nhà ga Metro Thảo điền - Xa lộ HN ở <b>{Location}</b>."
+		};
+        // Hải (wibu): Suối Tiên
+        var point_template_suoitien = {
+            title: "{name}",
+            content: "Công viên văn hoá Suối Tiên ở <b>{Location}</b>."
+        }
+
+
 		var jsondata = {
 			"points": [
+
+                // Suối Tiên của Hải (wibu)
+                {
+					type: "point",
+					longitude: 106.80331577762911,
+					latitude: 10.863263877152631, 
+					Name: "Quảng trường Phật Địa Mẫu",
+					Location: "thuộc khu du lịch Suối Tiên",
+					symbol: {
+						type: "simple-marker",
+						color: [0, 153, 51],
+						outline: {
+							color: [255, 255, 255],
+							width: 1
+						}
+					},
+					popupTemplate: point_template_suoitien
+				},
+
 				{
 					type: "point",
 					longitude: 106.7986823851482,
@@ -83,7 +147,7 @@
 						type: "simple-marker",
 						color: [0, 153, 51],
 						outline: {
-							color: [255, 255, 255],
+							color: [155, 255, 255],
 							width: 1
 						}
 					},
@@ -183,7 +247,7 @@
 							width: 1
 						}
 					},
-					popupTemplate: point_template_samsung
+					popupTemplate: point_template_nhamaysamsung
 				},
 				{
 					type: "point",
@@ -216,6 +280,54 @@
 						}
 					},
 					popupTemplate: point_template_daituongniem
+				},
+				{
+					type: "point",
+					longitude: 106.8599312251962,
+					latitude: 10.808429675725876, 
+					Name: "Chợ Long Phước",
+					Location: "Phường Long Phước",
+					symbol: {
+						type: "simple-marker",
+						color: [60, 183, 20], 
+						outline: {
+							color: [25, 25, 25],
+							width: 1
+						}
+					},
+					popupTemplate: point_template_cholongphuoc
+				},
+				{//Điểm Nhà hàng Dokkii - Vũ
+					type: "point",
+					longitude: 106.7219368,
+					latitude: 10.8280068,
+					Name: "Nhà hàng Dokkii",
+					Location: "tại khu Trung tâm thương mại Gigamall",
+					symbol: {
+						type: "simple-marker",
+						color: [255, 105, 180], 
+						outline: {
+							color: [255, 182, 193],
+							width: 1
+						}
+					},
+					popupTemplate: point_template_dokkii
+				},
+				{ //Điểm Ga Thảo Điền - Vũ
+					type: "point",
+					longitude: 106.7320384,
+					latitude: 10.8008488,
+					Name: "Ga Metro Thảo Điền - Xa lộ Hà Nội",
+					Location: "tại Thảo Điền, Thủ Đức, Hồ Chí Minh",
+					symbol: {
+						type: "simple-marker",
+						color: [255, 105, 180], 
+						outline: {
+							color: [255, 182, 193],
+							width: 1
+						}
+					},
+					popupTemplate: point_template_gametro
 				}
 			],
 			"lines": [
@@ -246,6 +358,33 @@
 				}
 			],
 			"polygons": [
+                // Suối Tiên của Hải (wibu)
+                {
+					type: "polygon",
+					rings: [
+						[106.80384446578441, 10.867153175339006 ],
+						[106.80073195425113, 10.865495187630664 ],
+						[106.80150995629009, 10.863161715219185 ],
+						[106.80252626526588, 10.86307223065302 ],
+						[106.80239593129383, 10.86127474744802 ],
+                        [106.80299873579516, 10.861286003330646 ],
+                        [106.80470456214573, 10.85739248561479 ],
+                        [106.80536727135613, 10.858930052354888 ]
+
+					],
+					Name: "Công viên du lịch Suối Tiên",
+					Location: "VR83+F7 Thủ Đức, Hồ Chí Minh, Việt Nam",
+					symbol: {
+						type: "simple-fill",
+						color: [0, 102, 204, 0.4],
+						outline: {
+							color: [255, 255, 255],
+							width: 1
+						}
+					},
+					popupTemplate: point_template_suoitien
+				},
+
 				{
 					type: "polygon",
 					rings: [
@@ -557,7 +696,123 @@
 						}
 					},
 					popupTemplate: point_template_samsung
+				},
+				//Phường Long Phước- Vinh
+				{
+					type: "polygon",
+					rings: [
+						[106.855541,10.842054],
+						[106.853673,10.837156],
+						[106.851609,10.835458],
+						[106.848266,10.834519],
+						[106.846439,10.831395],
+						[106.843441,10.830884],
+						[106.837981,10.832502],
+						[106.836590,10.831090],
+						[106.834991,10.820546],
+						[106.836172,10.818188],
+						[106.838467,10.817466],
+						[106.843604,10.820092],
+						[106.844722,10.818414],
+						[106.843358,10.815543],
+						[106.838889,10.811492],
+						[106.839395,10.809884],
+						[106.848685,10.805339],
+						[106.850689,10.792653],
+						[106.846514,10.786439],
+						[106.844474,10.779919],
+						[106.835977,10.784734],
+						[106.832737,10.782072],
+						[106.834245,10.779419],
+						[106.838158,10.777064],
+						[106.843469,10.778655],
+						[106.850223,10.778473],
+						[106.864257,10.768344],
+						[106.868262,10.772082],
+						[106.862705,10.787917],
+						[106.866710,10.794900],
+						[106.868512,10.792491],
+						[106.878274,10.801071],
+						[106.882121,10.807901],
+						[106.876559,10.820922]
+					],
+					Name: "Phường Long Phước",
+					Location: "phường Long Phước, Thủ Đức City, Ho Chi Minh City, Vietnam",
+					symbol: {
+						type: "simple-fill",
+						color: [155, 50, 80, 0.4], // Đã đổi sang màu đỏ nhạt
+						outline: {
+							color: [25, 145, 255], // Đã đổi sang màu hồng nhạt
+							width: 1
+						}
+					},
+					popupTemplate: point_template_longphuoc
+				},
+
+				//Vũ: Gigamall, Thảo Điền
+				{
+					type: "polygon",
+					rings: [
+						[106.720849, 10.827708],
+						[106.721837, 10.828291],
+						[106.722504, 10.827852],
+						[106.722555, 10.827477],
+						[106.721090, 10.827214],
+						[106.720883, 10.827146],
+						[106.720709, 10.827265],
+						[106.720635, 10.827346],
+						[106.720650, 10.827451],
+						[106.720801, 10.827611]
+					],
+					Name: "Trung tâm thương mại Gigamall",
+					Location: "240 - 242, Đ. Phạm Văn Đồng, Hiệp Bình Chánh, Thủ Đức, Hồ Chí Minh, Vietnam",
+					symbol: {
+						type: "simple-fill",
+						color: [255, 105, 180, 0.4],
+						outline: {
+							color: [255, 105, 180],
+						}
+					},
+					popupTemplate: point_template_gigamall
+				},
+				{
+					type: "polygon",
+					rings: [
+						[106.726131, 10.815715],
+						[106.731670, 10.818725],
+						[106.734124, 10.816016],
+						[106.735395, 10.811920],
+						[106.734715, 10.811909],
+						[106.733644, 10.811000],
+						[106.732852, 10.809449],
+						[106.732745, 10.808946],
+						[106.732855, 10.808885],
+						[106.733230, 10.810014],
+						[106.733931, 10.811088],
+						[106.734811, 10.811807],
+						[106.735922, 10.811368],
+						[106.736669, 10.810194],
+						[106.742302, 10.807397],
+						[106.748235, 10.808282],
+						[106.746961, 10.806188],
+						[106.748312, 10.802879],
+						[106.728400, 10.799169],
+						[106.728271, 10.801003],
+						[106.723722, 10.808001],
+						[106.724258, 10.813038]
+					],
+					Name: "Khu đô thị Thảo Điền",
+					Location: "Thủ Đức, Hồ Chí Minh, Việt Nam",
+					symbol: {
+						type: "simple-fill",
+						color: [255, 105, 180, 0.4],
+						outline: {
+							color: [255, 105, 180],
+						}
+					},
+					popupTemplate: point_template_thaodien
 				}
+
 			]
 		};
 		require([
