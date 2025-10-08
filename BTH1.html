@@ -21,7 +21,9 @@
 	<script>
 		var point_template_tree = {
 			title: "{Name}",
-			content: "Cây này ở <b>{Location}</b>."
+			content: "Cây này ở <b>{Location}</b>.<br><br> \
+			<img src=https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Linde_von_linn.jpg/1280px-Linde_von_linn.jpg \
+			alt='Cây xanh' style='width:150px;'>"
 		};
 		var point_template_light = {
 			title: "{Name}",
@@ -62,6 +64,22 @@
 		var point_template_samsung = {
 			title: "{Name}",
 			content: "Samsung ở <b>{Location}</b>."
+		};
+		var point_template_nhamaysamsung = {
+			title: "{Name}",
+			content: "Nhà máy Samsung ở <b>{Location}</b>.<br><br> \
+			<img src=https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrw5CV76qer7bt-otus1U5rk2AH4-GlLHvofHqKvK6nD-2l5kTtKMbDDLUiBZKwsxz4dp0lkJ0fUy50_0wvmlMMyoBOHrHvayM_O7uTOzUgAH2CayTkUGvLsLsPo8IkIKECyk7t=w408-h306-k-no \
+			alt='Nhà máy Samsung' style='width:250px;'>"
+		};
+		var point_template_longphuoc = {
+			title: "{Name}",
+			content: "Phường Long Phước ở <b>{Location}</b>."
+		};
+		var point_template_cholongphuoc = {
+			title: "{Name}",
+			content: "Chợ Long Phước ở <b>{Location}</b>.</br><br> \
+			<img src=https://longphuoc.vn/wp-content/uploads/2025/04/dat-nen-dat-o-dat-tho-cu-ba-ria-ba-ria-vung-tau-1668478776-nhadat.cafeland.vn_.jpg \
+			alt='Chợ Long Phước' style='width:300px;'>"
 		};
 		var point_template_nghiatrang = {
 			title: "{Name}",
@@ -121,7 +139,7 @@
 						type: "simple-marker",
 						color: [0, 153, 51],
 						outline: {
-							color: [255, 255, 255],
+							color: [155, 255, 255],
 							width: 1
 						}
 					},
@@ -221,7 +239,23 @@
 							width: 1
 						}
 					},
-					popupTemplate: point_template_samsung
+					popupTemplate: point_template_nhamaysamsung
+				},
+				{
+					type: "point",
+					longitude: 106.8599312251962,
+					latitude: 10.808429675725876, 
+					Name: "Chợ Long Phước",
+					Location: "Phường Long Phước",
+					symbol: {
+						type: "simple-marker",
+						color: [60, 183, 20], 
+						outline: {
+							color: [25, 25, 25],
+							width: 1
+						}
+					},
+					popupTemplate: point_template_cholongphuoc
 				},
 				{//Điểm Nhà hàng Dokkii - Vũ
 					type: "point",
@@ -621,6 +655,58 @@
 					},
 					popupTemplate: point_template_samsung
 				},
+				//Phường Long Phước- Vinh
+				{
+					type: "polygon",
+					rings: [
+						[106.855541,10.842054],
+						[106.853673,10.837156],
+						[106.851609,10.835458],
+						[106.848266,10.834519],
+						[106.846439,10.831395],
+						[106.843441,10.830884],
+						[106.837981,10.832502],
+						[106.836590,10.831090],
+						[106.834991,10.820546],
+						[106.836172,10.818188],
+						[106.838467,10.817466],
+						[106.843604,10.820092],
+						[106.844722,10.818414],
+						[106.843358,10.815543],
+						[106.838889,10.811492],
+						[106.839395,10.809884],
+						[106.848685,10.805339],
+						[106.850689,10.792653],
+						[106.846514,10.786439],
+						[106.844474,10.779919],
+						[106.835977,10.784734],
+						[106.832737,10.782072],
+						[106.834245,10.779419],
+						[106.838158,10.777064],
+						[106.843469,10.778655],
+						[106.850223,10.778473],
+						[106.864257,10.768344],
+						[106.868262,10.772082],
+						[106.862705,10.787917],
+						[106.866710,10.794900],
+						[106.868512,10.792491],
+						[106.878274,10.801071],
+						[106.882121,10.807901],
+						[106.876559,10.820922]
+					],
+					Name: "Phường Long Phước",
+					Location: "phường Long Phước, Thủ Đức City, Ho Chi Minh City, Vietnam",
+					symbol: {
+						type: "simple-fill",
+						color: [155, 50, 80, 0.4], // Đã đổi sang màu đỏ nhạt
+						outline: {
+							color: [25, 145, 255], // Đã đổi sang màu hồng nhạt
+							width: 1
+						}
+					},
+					popupTemplate: point_template_longphuoc
+				},
+
 				//Vũ: Gigamall, Thảo Điền
 				{
 					type: "polygon",
