@@ -152,7 +152,18 @@
 			width: "48px",
 			height: "48px"
 		};
-
+		const simpleMarkerSymbol_Dookki = {
+			type: "picture-marker",
+			url: "https://lh3.googleusercontent.com/p/AF1QipOGa6VZO2u1nIAMbUhzKAVhAcoSSO7Oar1NEH02=w408-h306-k-no",
+			width: "48px",
+			height: "48px"
+		};
+		const simpleMarkerSymbol_MetroThaoDien = {
+			type: "picture-marker",
+			url: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4noEK8AyJuDrlQgnkVJint0nnVOKzlxBXsVLUs1gVZqvWSR38PQDzsDewk9sIGNjyg5YP0_lE4rpuVcbdrQwdoEs7-R4W8B0TD0NmWqyG-NCkrRYi1SmanYMGWiiYmmRKYpJhheEsEoKhdtB=w408-h306-k-no",
+			width: "48px",
+			height: "48px"
+		};
 		var jsondata = {
 			"points": [
 
@@ -473,6 +484,24 @@
 						}
 					},
 					popupTemplate: point_template_gametro
+				},
+				{
+					type: "point",
+					longitude: 106.7219368,
+					latitude: 10.8280068,
+					Name: "Nhà hàng buffet Toboki Dookki",
+					Location: "tại khu Trung tâm thương mại Gigamall",
+					symbol: simpleMarkerSymbol_Dookki,
+					popupTemplate: point_template_dokkii
+				},
+				{
+					type: "point",
+					longitude: 106.7320384,
+					latitude: 10.8008488,
+					Name: "Ga Metro Thảo Điền - Xa lộ Hà Nội",
+					Location: "ở Thao Điền, Thủ Đức, Hồ Chí Minh",
+					symbol: simpleMarkerSymbol_MetroThaoDien,
+					popupTemplate: point_template_thaodien
 				},
 				{
 					type: "point",
