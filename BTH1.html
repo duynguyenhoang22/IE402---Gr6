@@ -69,6 +69,7 @@
 			title: "{Name}",
 			content: "Nhà hàng ở <b>{Location}</b>."
 		};
+		//Trung: KTX khu A, UEL
 		var point_template_ktx = {
 			title: "{Name}",
 			content: "Ký túc xá ở <b>{Location}</b>."
@@ -76,6 +77,10 @@
 		var point_template_uel = {
 			title: "{Name}",
 			content: "Trường ở <b>{Location}</b>."
+		};
+		var point_template_ah3 = {
+			title: "{Name}",
+			content: "Tòa nhà ở <b>{Location}</b>."
 		};
 		var point_template_nghiatrang = {
 			title: "{Name}",
@@ -465,6 +470,25 @@
 						}
 					},
 					popupTemplate: point_template_gametro
+				},
+				{
+					type: "point",
+					longitude: 106.81005109409233,
+					latitude: 10.88139334773953, 
+					Name: "Tòa nhà AH3 KTX khu A",
+					Location: "KTX khu A - ĐHQG TP.HCM",
+					symbol: {
+						type: "picture-marker",
+						url: "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrHqpve0gPvgQgkSNhsYcgYDsiDee56KBGcTZt6lB46vkmpP074497zUThAQc4Epg5e_r42ME06pJUa9nonMbvY52KZVIBYZayjlkoqLihLdOMsrIQVcL4z3ssDQxWRHJMBtNZ0=w86-h114-k-no",
+						width: "42px",
+						height: "42px",
+						yoffset: "13px",				
+						outline: {
+							color: [255, 255, 255],
+							width: 1
+						}
+					},
+					popupTemplate: point_template_ah3
 				}
 			],
 
